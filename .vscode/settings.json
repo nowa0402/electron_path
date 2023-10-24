@@ -1,0 +1,23 @@
+{
+    // "prettier.prettierPath": "./node_modules/prettier",
+    "prettier.configPath": "./.prettierrc.json",
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.codeActionsOnSave": {
+        "source.fixAll": true
+      }
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.codeActionsOnSave": {
+        "source.fixAll": true
+      }
+    },
+    "eslint.options": {
+      "configFile": ".eslintrc.cjs"
+    },
+    "editor.formatOnSave": true,
+    "files.eol": "\n",
+    "html.autoClosingTags": false
+  }
+  
