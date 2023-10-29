@@ -1,12 +1,26 @@
 {
   "name": "electron_path",
   "packageManager": "yarn@4.0.0",
+  "version": "0.0.1",
   "main": "./main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder --win --x64 --dir"
+  },
+  "build": {
+    "appId": "com.example.myapp",
+    "productName": "MyApp",
+    "files": [
+      "index.html",
+      "preload.js",
+      "main.js",
+      "renderer.js",
+      "!.vscode/*"
+    ]
   },
   "devDependencies": {
     "electron": "^27.0.2",
+    "electron-builder": "24.6.4",
     "eslint": "^8.52.0",
     "prettier": "^3.0.3"
   }
