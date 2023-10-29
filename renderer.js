@@ -1,7 +1,15 @@
-const btn = document.getElementById('btn')
-const filePathElement = document.getElementById('filePath')
+const dirBtn = document.getElementById('dirBtn')
+const dirElement = document.getElementById('dirPath')
 
-btn.addEventListener('click', async () => {
-  const filePath = await window.electronAPI.openFile()
-  filePathElement.innerText = filePath
+dirBtn.addEventListener('click', async () => {
+  const filePath = await window.electronAPI.dirPath()
+  dirElement.innerText = filePath
+})
+
+const resolveBtn = document.getElementById('resolveBtn')
+const resolveElement = document.getElementById('resolvePath')
+
+resolveBtn.addEventListener('click', async () => {
+  const filePath = await window.electronAPI.resolvePath()
+  resolveElement.innerText = filePath
 })
