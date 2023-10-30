@@ -1,10 +1,12 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
 
+// __dirnameを返却するハンドラー
 async function handleDirPath() {
   return __dirname
 }
 
+// path.resolve()を返却するハンドラー
 async function handleResolvePath() {
   return path.resolve('.')
 }
@@ -12,7 +14,7 @@ async function handleResolvePath() {
 function createWindow() {
   const mainWindow = new BrowserWindow({
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
+      preload: path.join(path.resolve(), 'preload.js'),
     },
   })
   mainWindow.loadFile('index.html')
